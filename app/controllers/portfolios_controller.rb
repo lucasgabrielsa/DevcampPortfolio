@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-    before_action :set_portfolio, only: [:edit, :update]
+    before_action :set_portfolio, only: [:edit, :update, :show]
 
     # GET /porfolios
     def index
@@ -39,15 +39,19 @@ class PortfoliosController < ApplicationController
         end
     end
 
+    # GET /portfolio/1/show
+    def show
+    end
+
     private 
     # Use callbacks to share common setup or constraints between actions
     def set_portfolio
         @portfolio_item = Portfolio.find(params[:id])
     end
+   
 
     # Never trust parameters from the scary internet, only allow the white list through.
-      def portfolio_params
-        params.require(:portfolio).permit(:title, :subtitle, :body)
-      end
-
+    def portfolio_params
+      params.require(:portfolio).permit(:title, :subtitle, :body)
+    end
 end
