@@ -4,6 +4,13 @@ class PortfoliosController < ApplicationController
     # GET /porfolios
     def index
         @portfolio_items = Portfolio.all
+        #@portfolio_items = Portfolio.angular
+        #@portfolio_items = Portfolio.angular_scope
+        #@portfolio_items = Portfolio.where(title: "Portlfolio Angular")
+    end
+
+    def angular 
+       @portfolio_items = Portfolio.angular
     end
 
     # GET /portfolios/new
@@ -70,3 +77,4 @@ class PortfoliosController < ApplicationController
       params.require(:portfolio).permit(:title, :subtitle, :body)
     end
 end
+
