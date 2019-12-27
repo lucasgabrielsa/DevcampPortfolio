@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :policenas
+
+  get  'test-policena', to: 'policenas#index', as: 'samuca'
+
+  resources :high_scores
   get 'angular-items', to: 'portfolios#angular', as:'angular-items'
 
   resources :portfolios, except: [:show]

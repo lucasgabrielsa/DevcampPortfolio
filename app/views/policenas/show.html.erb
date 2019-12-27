@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @policena.name %>
+</p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @policena.idade %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @policena.comentario %>
+</p>
+
+<%= link_to 'Edit', edit_policena_path(@policena) %> |
+<%= link_to 'Back', policenas_path %>
