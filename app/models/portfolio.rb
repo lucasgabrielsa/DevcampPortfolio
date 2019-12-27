@@ -2,17 +2,19 @@ class Portfolio < ApplicationRecord
     has_many :technologies
     accepts_nested_attributes_for :technologies, 
                                    reject_if: lambda { |attrs| attrs['name'].blank? }
-                                   
+
     include Placeholder
     validates_presence_of(:title, :body, :main_image, :thumb_image) 
 
-    #same way to do the same thing
-    #same way to do the same thing
+    ######################################
+    ######################################
+    #same way to do the same thing    
     def self.angular
         where(title: 'Portlfolio Angular')
     end
 
     scope :angular_scope, -> { where(title: 'Portlfolio Angular') }
+    #same way to do the same thing
     ######################################
     ######################################
 
