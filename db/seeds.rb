@@ -54,3 +54,12 @@ Portfolio.create!(
 )
 
 puts "6 portfolio items created"
+
+
+3.times do |count|
+    Technology.create!(
+        name: "Ruby #{count}",
+        portfolio_id: 1
+    )
+end
+puts '3 Tecnologies created'
