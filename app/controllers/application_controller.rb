@@ -2,12 +2,13 @@
 
 class ApplicationController < ActionController::Base
     include DeviseWhitelist
+    include SetSource
 
-    before_action :set_source   
+    # before_action :set_source   
 
-    def set_source 
-        session[:source] = params[:q] if params[:q]
-    end
+    # def set_source 
+    #     session[:source] = params[:q] if params[:q]
+    # end
 
     # All this code is in the Whitelist module
     # before_action :config_permitted_parameters, if: :devise_controller?
