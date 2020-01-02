@@ -14,3 +14,17 @@
 
 <hr />
 <%= link_to "Back", portfolios_path %> 
+
+
+<hr/>
+
+<%= params.inspect %> <br />
+
+<%= Portfolio.find(params[:id]).inspect %>
+
+<hr/>
+
+<!--
+<%= session.inspect %>
+>
+
