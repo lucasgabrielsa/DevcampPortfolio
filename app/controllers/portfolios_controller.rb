@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
     before_action :set_portfolio, only: [:edit, :update, :show, :destroy]
+    layout 'portfolio'
 
     # GET /porfolios
     def index
@@ -9,7 +10,7 @@ class PortfoliosController < ApplicationController
         #@portfolio_items = Portfolio.where(title: "Portlfolio Angular")
     end
 
-    def angular 
+    def angular
        @portfolio_items = Portfolio.angular
     end
 
@@ -22,10 +23,10 @@ class PortfoliosController < ApplicationController
     # POST /portfolios
     def create
         @portfolio_item = Portfolio.new(portfolio_params)
-    
+
         respond_to do |format|
           if @portfolio_item.save
-            format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }            
+            format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }
           else
             format.html { render :new }
           end
@@ -33,23 +34,24 @@ class PortfoliosController < ApplicationController
     end
 
     # GET /portfolios/#{id}/edit
-    def edit        
+    def edit
+      3.times { @portfolio_item.technologies.build }
     end
 
-    # PATCH/PUT /portfolios/1    
+    # PATCH/PUT /portfolios/1
     def update
         respond_to do |format|
         if @portfolio_item.update(portfolio_params)
-            format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }            
+            format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
         else
-            format.html { render :edit }            
+            format.html { render :edit }
         end
         end
     end
 
     # DELETE - /portfolio/1
-    def destroy 
-      @portfolio_item.destroy 
+    def destroy
+      @portfolio_item.destroy
       redirecionar_to_index('Portfolio was successfully deleted')
       # respond_to do |format|
       #   format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully deleted' }
@@ -60,7 +62,7 @@ class PortfoliosController < ApplicationController
     def show
     end
 
-    private 
+    private
     # Use callbacks to share common setup or constraints between actions
     def set_portfolio
         @portfolio_item = Portfolio.find(params[:id])
@@ -71,11 +73,10 @@ class PortfoliosController < ApplicationController
         format.html { redirect_to portfolios_path, notice: message }
       end
     end
-   
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
       params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
     end
 end
-

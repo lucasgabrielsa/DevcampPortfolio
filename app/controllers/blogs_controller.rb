@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toogle_status]
+  layout 'blog'
 
   # GET /blogs
   # GET /blogs.json
@@ -62,11 +63,11 @@ class BlogsController < ApplicationController
   end
 
   def toogle_status
-    # byebug 
+    # byebug
     #@blog.published!
     if @blog.draft?
       @blog.published!
-    else 
+    else
       @blog.draft!
     end
     redirect_to blogs_url, notice: 'Post status has been updated'
