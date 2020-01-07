@@ -4,6 +4,8 @@ class PortfoliosController < ApplicationController
 
     # GET /porfolios
     def index
+        #debug tool
+        #binding.pry
         @portfolio_items = Portfolio.all
         #@portfolio_items = Portfolio.angular
         #@portfolio_items = Portfolio.angular_scope
