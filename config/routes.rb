@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :clientes
   devise_for :users, path_names: { 'sign_in': 'login', 'sign_out': 'logout', sign_up:'register'}
   resources :policenas
 
@@ -22,8 +23,8 @@ Rails.application.routes.draw do
   #get 'pages/about
   get 'about', to: 'pages#about'
 
-  get 'contact', to: 'pages#contact'
+  get 'contact', to: 'pages#contact', as: 'contact'
   #get 'pages/contact'
-  
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
