@@ -5,13 +5,8 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-<<<<<<< HEAD
-    @blogs = Blog.all
-    @page_title = 'Blogs Index - DevPortfolio'
-=======
     #@blogs = Blog.all
     @blogs = Blog.special_blogs
->>>>>>> master
   end
 
   # GET /blogs/1
