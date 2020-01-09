@@ -49,5 +49,6 @@ gem 'friendly_id'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'pry-byebug'
 #commit teste
-gem 'bootstrap', '~> 4.0.0.alpha3'
+#gem 'bootstrap', '~> 4.0.0.alpha3'
+gem "bootstrap", ">= 4.3.1"
 gem 'petergate'
