@@ -26,6 +26,8 @@ development:
   database: DevcampPortfolio_development
   username: rails
   password: rails
+  #username: postgres
+  #password: 201398
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,6 +62,8 @@ development:
 test:
   <<: *default
   database: DevcampPortfolio_test
+  #username: postgres
+  #password: 201398
   username: rails
   password: rails
 
