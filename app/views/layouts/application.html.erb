@@ -20,16 +20,11 @@
 
     <%= render 'shared/application_nav' %>
 
+    <div class="main-container">
+      <%= yield %>
+    </div>
 
-    <!-- login_helper -->
-    <!--
-      <%= login_helper %> <% if session[:source]%>
-      <p>Thanks for visiting me from <%=session[:source] %></p>
-      <% end %>
-      <%= sample_helper_better %> 
-  -->
-    <%= yield %>
-
+    <%= render 'shared/footer' %>
   </div>
 </body>
 

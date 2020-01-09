@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
     # end
 
     def set_copyright
-        @copyright = DevcampViewTool::Renderer.copyright 'Lucas Gabriel', 'BTL Technology'
+        @copyright = DevcampViewTool::Renderer.copyright 'Lucas Gabriel', 'All Rights Reserved'
     end
 
 end
