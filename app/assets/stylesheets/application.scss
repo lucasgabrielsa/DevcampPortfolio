@@ -55,6 +55,8 @@ footer {
 }
 
 .main-container {
+  margin: 0 auto;
+  width: 100%;
   text-align: center;
 }
 
@@ -135,4 +137,15 @@ footer {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+.card-body {
+  color: black;
+  text-align: left;
+}
+
+.is-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
