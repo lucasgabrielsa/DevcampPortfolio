@@ -7,7 +7,7 @@ module ApplicationHelper
     content_tag(:div, "My Content inside div", class:"my-class")
   end
 
-  def login_helper(classe)
+  def login_helper(classe='')
     if current_user.is_a?(GuestUser)
       (link_to "Login", new_user_session_path, class: classe).html_safe +
       (link_to "Register", new_user_registration_path, class: classe)      
