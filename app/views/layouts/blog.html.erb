@@ -18,6 +18,7 @@
     <div class="container">
       <h1 class="blog-title">Lucas Gabriel Blog</h1>
       <p class="lead blog-description">A developer blog, talking about cool developer things.</p>
+      <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
     </div>
   </div>
 
@@ -28,13 +29,10 @@
   </div><!-- /.container -->
 
   <footer class="blog-footer">
-    <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a
-        href="https://twitter.com/mdo">@mdo</a>.</p>
-    <p>
-      <a href="#">Back to top</a>
-    </p>
+    <p><%= @copyright %><p>
+        <a href="#">Back to top</a>
+      </p>
   </footer>
-
 
 </body>
 

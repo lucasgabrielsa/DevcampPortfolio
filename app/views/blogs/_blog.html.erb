@@ -7,7 +7,6 @@
     <%= link_to '/ Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
   </p>
 
-
   <p>
     <%= blog.body %>
   </p>
