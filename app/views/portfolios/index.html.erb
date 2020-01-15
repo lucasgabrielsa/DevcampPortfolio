@@ -1,14 +1,11 @@
-<h1>Portfolios Items</h1>
-<a href="portfolios/new">Create New Item</a>
 <!--
+<a href="portfolios/new">Create New Item</a>
 <%= link_to "Create New Item", new_portfolio_path %>
 <%= new_portfolio_path %>
 <%= new_portfolio_url %>
 -->
-<hr/>
-
-<%= render partial:'portfolio_item', collection: @portfolio_items %>
-
-
-
-<hr/>
+<div class="container">
+    <div class="row">
+        <%= render partial:'portfolio_item', collection: @portfolio_items %>
+    </div>
+</div>

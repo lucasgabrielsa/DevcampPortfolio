@@ -3,7 +3,7 @@
         <nav class="nav blog-nav">
             <%= link_to "Home", root_path, class:"nav-link #{'active' if current_page?(root_path)}"%>
             <%= link_to "About", about_path, class:"nav-link #{'active' if current_page?(about_path)}" %>
-            <%= link_to "Blogs", blogs_path, class:"nav-link #{'active' if current_page?(blogs_path)}" %>
+            <%= link_to "Blog", blogs_path, class:"nav-link #{'active' if current_page?(blogs_path)}" %>
             <%= link_to "Contact", contact_path, class:"nav-link #{'active' if current_page?(contact_path)}" %>
             <%= link_to "Portfolio", portfolios_path, class:"nav-link #{'active' if current_page?(portfolios_path)}" %>
             <%= login_helper('nav-link') %>
