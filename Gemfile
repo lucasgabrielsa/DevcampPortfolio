@@ -52,3 +52,5 @@ gem 'pry-byebug'
 #gem 'bootstrap', '~> 4.0.0.alpha3'
 gem "bootstrap", ">= 4.3.1"
 gem 'petergate'
+gem "font-awesome-rails"
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
