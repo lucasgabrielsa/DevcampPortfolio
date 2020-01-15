@@ -13,26 +13,13 @@
 <body>
 
   <%= render 'shared/blog_navbar' %>
-
-  <div class="blog-header">
-    <div class="container">
-      <h1 class="blog-title">Lucas Gabriel Blog</h1>
-      <p class="lead blog-description">A developer blog, talking about cool developer things.</p>
-      <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
-    </div>
-  </div>
+  <%= render 'shared/blog_header' %>
 
   <div class="container">
-
     <%= yield %>
-
   </div><!-- /.container -->
 
-  <footer class="blog-footer">
-    <p><%= @copyright %><p>
-        <a href="#">Back to top</a>
-      </p>
-  </footer>
+  <%= render 'shared/blog_footer' %>
 
 </body>
 
