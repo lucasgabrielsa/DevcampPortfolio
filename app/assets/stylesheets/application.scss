@@ -154,8 +154,15 @@ footer {
   color: black !important;
 }
 
+/* Custom styles */
+
 .login>.card {
   width: 22rem;
   margin: 0 auto;
   float: none;
+}
+
+.app-nav span {
+  margin-left: 10px;
+  margin-right: 10px;
 }
