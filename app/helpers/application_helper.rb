@@ -27,10 +27,48 @@ NAV
     nav_links.html_safe
   end
 
+  def nav_items
+    [
+      {
+        url: root_path,
+        title: 'Home',
+        active_urls: [{url:root_path}]
+      },
+      {
+        url: about_path,
+        title: 'About',
+        active_urls: [{url:about_path}]
+      },
+      {
+        url: blogs_path,
+        title: 'Blog',
+        active_urls: [{url:blogs_path}, {url:new_blog_path}]
+      },
+      {
+        url: contact_path,
+        title: 'Contact',
+        active_urls: [{url:contact_path}]
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolio',
+        active_urls: [{url:portfolios_path}]
+      }
+    ]
+  end
+
+  def nav_help_better (style, tag_type) 
+    nav_links = ''
+    nav_items.each do |item|
+      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+    end
+    nav_links.html_safe
+  end 
 
   def active? path
     "active" if current_page? path
   end
+
 end
 
 # nav_helper model 
