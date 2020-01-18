@@ -11,19 +11,13 @@
 </head>
 
 <body>
-
   <%= render 'shared/portfolio_navbar' %>
-
   <main role="main">
-
-    <%= render 'shared/portfolio_masterhead' %>
-
+    <%= render 'shared/portfolio_masterhead' unless logged_in?(:site_admin) %>
     <div class="album py-5 bg-light">
       <%= yield %>
     </div>
-
   </main>
-
   <%= render 'shared/portfolio_footer' %>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -34,9 +28,6 @@
   </script>
 
 </body>
-
 </html>
-
 </body>
-
 </html>
